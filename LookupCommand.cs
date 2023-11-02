@@ -11,12 +11,12 @@ internal sealed class LookupCommand : Command<LookupCommand.Settings>
 {
     public sealed class Settings : CommandSettings
     {
-        [CommandArgument(0, "<url>")]
-        [Description(description:"Make the output text rainbow")]
+        [CommandArgument(0, "<Url>")]
+        [Description(description:"The url you want to look up")]
         public required string Url { get; set; }
         
-        [CommandArgument(1, "[record types]")]
-        [Description(description:"Make the output text rainbow")]
+        [CommandArgument(1, "[Record Types]")]
+        [Description(description:"The record types you want to find (defaults to all if not specified)")]
         [DefaultValue("ANY")]
         public string[]? Records { get; set; }
         
